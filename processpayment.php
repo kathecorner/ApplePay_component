@@ -10,6 +10,7 @@ $additional_data = [
     //'reference' => 'KenjiW001',
     'reference' => 'ApplePay_0001',
     'merchantAccount' => 'KenjiW',
+    'countryCode' => 'US',
     'amount' => [
         'value' => 100,
         'currency' => 'USD'
