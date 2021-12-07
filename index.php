@@ -129,6 +129,7 @@ const applePayConfiguration = {
       billingAddressRequired: true
     },
     OnSubmit: (state, component) => {
+      alert('OnSubmit');
       makePayment(state.data)
                 .then(response => {
                     var responseData = response.action;
