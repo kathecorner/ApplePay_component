@@ -53,8 +53,6 @@ curl_close($curl);
  <script src="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/4.7.0/adyen.js"
  integrity="sha384-Hmnh/5ShP0Q8iCjGV2U/6XFi7jiiFys4fsh7UrCH1JT1PV1ThZ9czMnbbyjzxuhU"
  crossorigin="anonymous"></script>
-
- <script src="https://code.jquery.com/jquery-3.6.0.min.js" charset="utf-8"></script>
   </head>
   <body>
 
@@ -69,24 +67,10 @@ curl_close($curl);
 
     var availablePaymentMethods = JSON.parse( <?php echo $paymentmethodsrequestresponse; ?> );
 
-    function makePayment(state) {
-          const prom_data = state;
-          return new Promise(
-              function (resolve,reject) {
-                  $.ajax(
-                      {
-                          type: "POST",
-                          url: "/processpayment.php",
-                          data: prom_data,
-                          success: function (response) {
-                              resolve(response);
-                          }
-                      }
-                  );
-              }
-          );
+    //const configuration = {
+//};
 
-      }
+
 
 const applePayConfiguration = {
     environment: 'test', // Change to 'live' for the live environment.
@@ -95,11 +79,6 @@ const applePayConfiguration = {
       id: 'CSD9CAC3...', // Unique identifier for the payment session.
       sessionData: 'Ab02b4c...' // The payment session data.
     },
-    amount: {
-        value: 1000,
-        currency: "USD"
-    },
-    countryCode: "US",
     //onValidateMerchant is required if you're using your own Apple Pay certificate
     onValidateMerchant: (resolve, reject, validationURL) => {
         // Your server uses the validation URL to request a session from the Apple Pay server.
@@ -127,41 +106,17 @@ const applePayConfiguration = {
       hasHolderName: true,
       holderNameRequired: true,
       billingAddressRequired: true
-    },
-    OnSubmit: (state, component) => {
-<<<<<<< HEAD
-      alert('OnSubmit');
-=======
->>>>>>> origin/master
-      makePayment(state.data)
-                .then(response => {
-                    var responseData = response.action;
-                    console.log(response);
-                    if(response.action) {
-                        //back the data to frontend here
-                    }
-                    else{
-                        showFinalResult(response);
-                    }
-                })
-                .catch(error => {
-                    console.log(error);
-                    throw Error(error);
-                });
     }
 };
 
 const checkout = new AdyenCheckout(applePayConfiguration);
 //const applePayComponent = checkout.create('applepay', applePayConfiguration);
-<<<<<<< HEAD
 
 // Create an instance of AdyenCheckout using the configuration object.
 //const applePayComponent = new AdyenCheckout(applePayConfiguration);
 //const applePayComponent = checkout.create('applepay', applePayConfiguration);
 // Create an instance of Drop-in and mount it to the container you created.
 //const dropinComponent = checkout.create('dropin').mount('#dropin-container');
-=======
->>>>>>> origin/master
 const applePayComponent = checkout.create('applepay', applePayConfiguration).mount('#applepay-container');
 /*
 applePayComponents
@@ -176,8 +131,16 @@ applePayComponents
 
 
 </script>
-<<<<<<< HEAD
-<!--  function makePayment(state) {
+
+
+
+<!--    <div id="kenjis-dropin"></div>
+
+
+
+
+
+      function makePayment(state) {
           const prom_data = state;
           return new Promise(
               function (resolve,reject) {
@@ -249,7 +212,5 @@ applePayComponents
       const dropin = checkout.create('dropin').mount('#customCard-container');
 
     -->
-=======
->>>>>>> origin/master
   </body>
 </html>

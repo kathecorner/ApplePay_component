@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-$url = "https://checkout-test.adyen.com/v66/payments";
-=======
-$url = "https://checkout-test.adyen.com/v67/payments";
->>>>>>> origin/master
+$url = "https://checkout-test.adyen.com/checkout/v64/applePay/sessions";
 
 $payments_data = $_POST;
 
@@ -12,37 +8,19 @@ $payments_data = $_POST;
 
 $additional_data = [
     //'reference' => 'KenjiW001',
-    'reference' => 'ApplePay_0001',
+    'reference' => 'applepay_component_test',
     'merchantAccount' => 'KenjiW',
-<<<<<<< HEAD
-    'countryCode' => 'US',
-=======
->>>>>>> origin/master
     'amount' => [
-        'value' => 100,
+        'value' => 1000,
         'currency' => 'USD'
     ],
     'returnUrl' => 'http://127.0.0.1:8080/return.php',
     'channel' => 'Web',
-<<<<<<< HEAD
-=======
-    'countryCode' => 'US',
->>>>>>> origin/master
-    'additionalData' => [
-        'allow3DS2' => 'true'
-    ],
     'origin' => 'http://127.0.0.1:8080',
     //'paymentMethod' => $payments_data->PaymentMethod,
-    'browserInfo' => [
-      'userAgent' => 'Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/70.0.3538.110 Safari\/537.36',
-      'acceptHeader' => "text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,image\/apng,*\/*;q=0.8",
-      "language" => "en-US",
-      "colorDepth" => 24,
-        "screenHeight" => 723,
-        "screenWidth" => 1536,
-        "timeZoneOffset" => 0,
-      "javaEnabled" => true
-    ]
+    'displayName'=> 'KenjiW',
+    'domainName'=> 'adyenapplepay.herokuapp.com',
+    'merchantIdentifier'=> 'KenjiW'
 ];
 
 $final_payment_data = array_merge($payments_data, $additional_data);

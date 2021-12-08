@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 <?php
 
 // 1. prepare api request to adyen library
@@ -80,11 +83,14 @@ const applePayConfiguration = {
       id: 'CSD9CAC3...', // Unique identifier for the payment session.
       sessionData: 'Ab02b4c...' // The payment session data.
     },
+<<<<<<< HEAD
     amount: {
       value:  1000,
       currency: "USD"
     },
     countryCode: "US",
+=======
+>>>>>>> origin/master
     //onValidateMerchant is required if you're using your own Apple Pay certificate
     onValidateMerchant: (resolve, reject, validationURL) => {
         // Your server uses the validation URL to request a session from the Apple Pay server.
@@ -101,7 +107,10 @@ const applePayConfiguration = {
     },
     onPaymentCompleted: (result, component) => {
         console.info(result, component);
+<<<<<<< HEAD
         alert('Payment Completed.');
+=======
+>>>>>>> origin/master
     },
     onError: (error, component) => {
         console.error(error.name, error.message, error.stack, component);
