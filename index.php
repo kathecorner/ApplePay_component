@@ -68,7 +68,7 @@ curl_close($curl);
   <style>
   body {
 padding: 10px;
-background-color: #fffff;
+background-color: #fff;
 }
 
 p {
@@ -211,7 +211,8 @@ height: atuo;
       enableStoreDetails: false,//added on Aug30
       billingAddressRequired: false,//added on Aug30
       secondaryAmount: true,
-      
+      buttonType: "subscribe",
+      buttonColor: "white-with-line",
       onSubmit: (state,dropin)=>{
           //setTimeout(stopProcessing, 3000);
           makePayment(state.data)
@@ -272,7 +273,7 @@ height: atuo;
     }
 
   </script>
-  <body onload="initialLoad()"><!--force to call initialLoad() function
+  <body onload="initialLoad()"><!--force to call initialLoad() function 
     <img src="applepay_mufg.jpeg" alt="Italian Trulli">-->
 
     <h1></h1>
