@@ -65,6 +65,57 @@ curl_close($curl);
 
      <script src="https://code.jquery.com/jquery-3.6.0.min.js" charset="utf-8"></script>
   </head>
+  <style>
+  body {
+padding: 10px;
+background-color: #fffff;
+}
+
+p {
+font-size: 12px;
+line-height: 1.4;
+}
+
+table {
+margin: 30px 0;
+}
+
+table th {
+font-size: 12px;
+}
+
+#float-box {
+overflow: hidden;
+}
+
+#float-box img {
+float: left;
+max-width: 45%;
+}
+
+#float-box p {
+float: right;
+max-width: 50%;
+}
+
+img {
+max-width: 100%;
+height: atuo;
+}
+
+#kenjis-dropin {
+  max-width: 100%;
+  height: atuo;
+}
+
+@media screen and (max-width: 400px) {
+#float-box img,
+#float-box p {
+  float: none;
+  max-width: 100%;
+}
+}
+  </style>
   <script type="text/javascript">
 
     var availablePaymentMethods = JSON.parse( <?php echo $paymentmethodsrequestresponse; ?> );
