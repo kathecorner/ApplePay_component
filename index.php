@@ -211,8 +211,7 @@ height: atuo;
       enableStoreDetails: false,//added on Aug30
       billingAddressRequired: false,//added on Aug30
       secondaryAmount: true,
-      buttonType:"subscribe",
-      buttonColor: "white-with-line"
+      
       onSubmit: (state,dropin)=>{
           //setTimeout(stopProcessing, 3000);
           makePayment(state.data)
