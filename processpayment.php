@@ -8,15 +8,16 @@ $payments_data = $_POST;
 
 $additional_data = [
     //'reference' => 'KenjiW001',
-    'reference' => 'playground_11142022_01',
-    'merchantAccount' => 'NobuyaIwaoCOM',
+    'reference' => date("Ymt").'playground_APComponent_'.time(),
+    'merchantAccount' => 'KenjiW',
     //'countryCode' => 'DK',
     'amount' => [
-        'value' => 0,
-        'currency' => 'INR'
+        'value' => 1000,
+        'currency' => 'USD'
     ],
     //'returnUrl' => 'http://127.0.0.1:8080/return.php',
-    'returnUrl' => 'http://127.0.0.1:8080/result.php',
+    //'returnUrl' => 'http://127.0.0.1:8080/result.php',
+    'returnUrl' => '/result.php',
     'channel' => 'Web',
     'additionalData' => [
         'allow3DS2' => 'true'
@@ -26,7 +27,7 @@ $additional_data = [
       "threeDSRequestorChallengeInd"=> "01"
 
     ],
-    'origin' => 'http://127.0.0.1:8080',
+    'origin' => 'https://adyenwebkenji.herokuapp.com',
     'billingAddress' => '123 Eastgate, San Diego, USA, 92121',
     //'paymentMethod' => $payments_data->PaymentMethod,
     /*
@@ -70,7 +71,7 @@ $additional_data = [
 $final_payment_data = array_merge($payments_data, $additional_data);
 
 $curl_http_header = array(
-    "X-API-Key: AQEyhmfxLo/JYhZEw0m/n3Q5qf3VaY9UCJ1+XWZe9W27jmlZinFziP7eh81X6VPylhwbL0IQwV1bDb7kfNy1WIxIIkxgBw==-P0fsTdJtfItAU6POtaZObNDTJSVvm7749vgZ7dBXQ8M=-whdeW3vA2N6wvhtL",
+    "X-API-Key: AQEyhmfxL4PJahZCw0m/n3Q5qf3VaY9UCJ1+XWZe9W27jmlZiv4PD4jhfNMofnLr2K5i8/0QwV1bDb7kfNy1WIxIIkxgBw==-lUKXT9IQ5GZ6d6RH4nnuOG4Bu//eJZxvoAOknIIddv4=-<anpTLkW{]ZgGy,7",
     "Content-Type: application/json"
 );
 
