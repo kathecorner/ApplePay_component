@@ -12,19 +12,19 @@
 $url = "https://checkout-test.adyen.com/v69/paymentMethods";
 
 $payload = array(
-  "merchantAccount" => "NobuyaIwaoCOM",
-  "countryCode" => "IN",
+  "merchantAccount" => "KenjiW",
+  "countryCode" => "US",
   "channel" => "web",
   "amount" => [
-    "value" => 0,
-    "currency" => "INR",
+    "value" => 1000,
+    "currency" => "USD",
     //"currency" => "JPY",
     ],
     "shopperReference" => "Shopper03" //enable it when need to show tokanization
 );
 
 $curl_http_header = array(
-   "X-API-Key: AQEyhmfxLo/JYhZEw0m/n3Q5qf3VaY9UCJ1+XWZe9W27jmlZinFziP7eh81X6VPylhwbL0IQwV1bDb7kfNy1WIxIIkxgBw==-P0fsTdJtfItAU6POtaZObNDTJSVvm7749vgZ7dBXQ8M=-whdeW3vA2N6wvhtL",
+   "X-API-Key: AQEyhmfxL4PJahZCw0m/n3Q5qf3VaY9UCJ1+XWZe9W27jmlZiv4PD4jhfNMofnLr2K5i8/0QwV1bDb7kfNy1WIxIIkxgBw==-lUKXT9IQ5GZ6d6RH4nnuOG4Bu//eJZxvoAOknIIddv4=-<anpTLkW{]ZgGy,7",
    "Content-Type: application/json"
 );
 
@@ -151,7 +151,7 @@ curl_close($curl);
 
     var configuration = {
       paymentMethodsResponse : availablePaymentMethods,
-      clientKey: "test_FLZFMM5BLNB3FJXRV5VIY3ZIZEGQNZUU",
+      clientKey: "test_RKKBP5GHOFFUFJJMJHOJAG7ZIIJKBMI6",
       locale: "en-US",
       showPayButton: true,
       environment: "test",
