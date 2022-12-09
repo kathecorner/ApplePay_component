@@ -64,7 +64,7 @@ curl_close($curl);
      crossorigin="anonymous"></script>
 
      <script src="https://code.jquery.com/jquery-3.6.0.min.js" charset="utf-8"></script>
-  </head>
+
   <style>
   body {
 padding: 10px;
@@ -108,6 +108,21 @@ height: atuo;
   height: atuo;
 }
 
+.apple-pay-button {
+    display: inline-block;
+    -webkit-appearance: -apple-pay-button;
+    -apple-pay-button-type: donate; /* Use any supported button type. */
+}
+.apple-pay-button-black {
+    -apple-pay-button-style: black;
+}
+.apple-pay-button-white {
+    -apple-pay-button-style: white;
+}
+.apple-pay-button-white-with-line {
+    -apple-pay-button-style: white-outline;
+}
+
 @media screen and (max-width: 400px) {
 #float-box img,
 #float-box p {
@@ -116,6 +131,7 @@ height: atuo;
 }
 }
   </style>
+</head>
   <script type="text/javascript">
 
     var availablePaymentMethods = JSON.parse( <?php echo $paymentmethodsrequestresponse; ?> );
@@ -153,7 +169,7 @@ height: atuo;
         if(responseData.resultCode == "Authorised"){
             alert('PAYMENT SUCCESSFUL!');
             //window.location.href = 'http://127.0.0.1:8080/return.php';
-            window.location.href = 'http://127.0.0.1:8080/showResults.php';
+            window.location.href = '/showResults.php';
         }
     }
 
@@ -273,7 +289,7 @@ height: atuo;
     }
 
   </script>
-  <body onload="initialLoad()"><!--force to call initialLoad() function 
+  <body onload="initialLoad()"><!--force to call initialLoad() function
     <img src="applepay_mufg.jpeg" alt="Italian Trulli">-->
 
     <h1></h1>
