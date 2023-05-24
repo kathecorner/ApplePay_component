@@ -269,6 +269,7 @@ height: atuo;
           });
       },
       onShippingContactSelected: (resolve, reject, event) => {
+        alert('onShippingContactSelected');
       },
       paymentMethodsConfiguration: {
           card:{
