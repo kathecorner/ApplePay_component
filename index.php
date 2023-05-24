@@ -268,6 +268,8 @@ height: atuo;
             throw Error(error);
           });
       },
+      onShippingContactSelected: (resolve, reject, event) => {
+      },
       paymentMethodsConfiguration: {
           card:{
               hasHolderName: true,
