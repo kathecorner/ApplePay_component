@@ -229,12 +229,7 @@ height: atuo;
       secondaryAmount: true,
       buttonType: "subscribe",
       buttonColor: "white-with-line",
-      requiredShippingContactFields: {
-         "postalAddress",
-         "name",            
-         "phone",
-         "email"
-     },
+      requiredShippingContactFields: "postalAddress",
       onSubmit: (state,dropin)=>{
           //setTimeout(stopProcessing, 3000);
           makePayment(state.data)
