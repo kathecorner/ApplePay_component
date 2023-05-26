@@ -229,7 +229,7 @@ height: atuo;
       secondaryAmount: true,
       buttonType: "subscribe",
       buttonColor: "white-with-line",
-      requiredShippingContactFields: [
+      request.requiredShippingContactFields: [
             "postalAddress",
             "name",
             "phone",
