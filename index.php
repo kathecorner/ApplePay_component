@@ -235,6 +235,14 @@ height: atuo;
 shippingAddressParameters: {
    phoneNumberRequired: true // optional
 },
+      deliveryAddress : {
+      postalCode : "111 44",
+      street : "NA",
+
+      houseNumberOrName : "Mäster Samuelsgatan",
+      country : "SE",
+      city : "Stockholm"
+   },
       onSubmit: (state,dropin)=>{
           //setTimeout(stopProcessing, 3000);
           makePayment(state.data)
