@@ -230,8 +230,7 @@ height: atuo;
       buttonType: "subscribe",
       buttonColor: "white-with-line",
       amount: {        value: 1000,        currency: "EUR"    },
-      request:{ 
-        requiredShippingContactFields:
+      requiredShippingContactFields:{
             "postalAddress"
         },
       shippingAddressRequired: true,
