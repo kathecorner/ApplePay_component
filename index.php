@@ -229,7 +229,7 @@ height: atuo;
       secondaryAmount: true,
       buttonType: "subscribe",
       buttonColor: "white-with-line",
-      currencyCode: "JPY",
+      amount: {        value: 1000,        currency: "EUR"    },
       request:{ 
         requiredShippingContactFields:
             "postalAddress"
