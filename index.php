@@ -277,6 +277,10 @@ shippingAddressParameters: {
       onShippingContactSelected: (resolve, reject, event) => {
         alert('onShippingContactSelected');
       },
+      onAuthorized: (resolve, reject, event)=>{
+        const postalAddress = event.payment.shippingContact;
+        console.log(postalAddress);
+      },
       paymentMethodsConfiguration: {
           card:{
               hasHolderName: true,
