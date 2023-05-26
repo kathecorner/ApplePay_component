@@ -232,7 +232,11 @@ height: atuo;
       request:{ 
         requiredShippingContactFields:
             "postalAddress"
-        },     
+        },
+      shippingAddressRequired: true,
+shippingAddressParameters: {
+   phoneNumberRequired: true // optional
+},
       onSubmit: (state,dropin)=>{
           //setTimeout(stopProcessing, 3000);
           makePayment(state.data)
