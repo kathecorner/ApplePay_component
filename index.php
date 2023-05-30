@@ -328,7 +328,7 @@ height: atuo;
         const postalAddress = event.payment.shippingContact;
         console.log(postalAddress);
       },
-      paymentMethodsConfiguration: {
+      paymentMethodsConfiguration_old: {
           card:{
               hasHolderName: true,
               holderNameRequired: true,
