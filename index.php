@@ -321,7 +321,7 @@ height: atuo;
     }
 
     async function initialLoad(){
-      const checkout = await AdyenCheckout(ApplePayconfiguration);
+      const checkout = await AdyenCheckout(configuration);
       const dropin = checkout.create('applepay').mount('#kenjis-dropin');
       //const dropin = checkout.create('card').mount('#kenjis-dropin');
     }
