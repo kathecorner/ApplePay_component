@@ -250,7 +250,7 @@ height: atuo;
       
 
       paymentMethodsConfiguration: {
-        applePay: applePayConfiguration,
+        applepay: applePayConfiguration,
       
    },
       
