@@ -215,17 +215,10 @@ height: atuo;
         const stopProcessing = () => {
           document.location="/showResult.html";
         }
-
-    var ApplePayconfiguration = {
-      paymentMethodsResponse : availablePaymentMethods,
-      clientKey: "test_RKKBP5GHOFFUFJJMJHOJAG7ZIIJKBMI6",
-      locale: "en-US",
-      showPayButton: true,
-      environment: "test",
-      amount: {        value: 1000,        currency: "EUR"    },
-
-      configuration: {
-      "requiredBillingContactFields": [
+        
+    var applePayConfiguration:{
+	amount: {        value: 1000,        currency: "EUR"    },
+	"requiredBillingContactFields": [
         "postalAddress",
         "name",
         "phoneticName"
@@ -246,6 +239,19 @@ height: atuo;
             "amount": "0.00"
         }
     ]
+}
+
+    var configuration = {
+      paymentMethodsResponse : availablePaymentMethods,
+      clientKey: "test_RKKBP5GHOFFUFJJMJHOJAG7ZIIJKBMI6",
+      locale: "en-US",
+      showPayButton: true,
+      environment: "test",
+      
+
+      paymentMethodsConfiguration: {
+        applePay: applePayConfiguration,
+      
    },
       
       
