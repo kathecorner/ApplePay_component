@@ -218,28 +218,7 @@ height: atuo;
         
     var applePayConfiguration = {
 	amount: {        value: 1000,        currency: "EUR"    },
-	countrycode: "DE",
-	"requiredBillingContactFields": [
-        "postalAddress",
-        "name",
-        "phoneticName"
-    ],
-    "requiredShippingContactFields": [
-        "postalAddress",
-        "name",
-        "phone",
-        "email"
-    ],
-    "lineItems": [
-        {
-            "label": "Sales Tax",
-            "amount": "0.00"
-        },
-        {
-            "label": "Shipping",
-            "amount": "0.00"
-        }
-    ]
+	countrycode: "DE",	        
 }
 
     var configuration = {
