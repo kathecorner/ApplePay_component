@@ -216,7 +216,7 @@ height: atuo;
           document.location="/showResult.html";
         }
 
-    var configuration = {
+    var ApplePayconfiguration = {
       paymentMethodsResponse : availablePaymentMethods,
       clientKey: "test_RKKBP5GHOFFUFJJMJHOJAG7ZIIJKBMI6",
       locale: "en-US",
@@ -224,6 +224,7 @@ height: atuo;
       environment: "test",
       amount: {        value: 1000,        currency: "EUR"    },
 
+      configuration: {
       "requiredBillingContactFields": [
         "postalAddress",
         "name",
@@ -244,7 +245,8 @@ height: atuo;
             "label": "Shipping",
             "amount": "0.00"
         }
-    ],
+    ]
+   },
       
       
       
@@ -313,7 +315,7 @@ height: atuo;
     }
 
     async function initialLoad(){
-      const checkout = await AdyenCheckout(configuration);
+      const checkout = await AdyenCheckout(ApplePayconfiguration);
       const dropin = checkout.create('applepay').mount('#kenjis-dropin');
       //const dropin = checkout.create('card').mount('#kenjis-dropin');
     }
