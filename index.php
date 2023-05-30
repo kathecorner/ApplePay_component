@@ -4,7 +4,7 @@
 // 2. get all payment methods for this shopper /GetPeyments API
 // 3. type: 'upi_collect', currency: INR
 
-// User Registeration
+// User Registeration 
 // PayAsYouGo
 // Tokenization/RecurringPayment
 // Fraud
