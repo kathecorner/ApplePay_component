@@ -222,28 +222,36 @@ height: atuo;
       locale: "en-US",
       showPayButton: true,
       environment: "test",
-      hasHolderName: false,//added on Aug30
-      holderNameRequired: false,//added on Aug30
-      enableStoreDetails: false,//added on Aug30
-      billingAddressRequired: false,//added on Aug30
-      secondaryAmount: true,
-      buttonType: "subscribe",
-      buttonColor: "white-with-line",
       amount: {        value: 1000,        currency: "EUR"    },
-      requiredShippingContactFields: 
-        ["postalAddress"],
-      shippingAddressRequired: true,
-shippingAddressParameters: {
-   phoneNumberRequired: true // optional
-},
-      deliveryAddress : {
-      postalCode : "111 44",
-      street : "NA",
 
-      houseNumberOrName : "Mäster Samuelsgatan",
-      country : "SE",
-      city : "Stockholm"
-   },
+      "requiredBillingContactFields": [
+        "postalAddress",
+        "name",
+        "phoneticName"
+    ],
+    "requiredShippingContactFields": [
+        "postalAddress",
+        "name",
+        "phone",
+        "email"
+    ],
+    "lineItems": [
+        {
+            "label": "Sales Tax",
+            "amount": "0.00"
+        },
+        {
+            "label": "Shipping",
+            "amount": "0.00"
+        }
+    ],
+      
+      
+      
+      
+      
+      
+      
       onSubmit: (state,dropin)=>{
           //setTimeout(stopProcessing, 3000);
           makePayment(state.data)
