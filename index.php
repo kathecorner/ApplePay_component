@@ -216,7 +216,7 @@ height: atuo;
           document.location="/showResult.html";
         }
         
-    var applePayConfiguration:{
+    var applePayConfiguration = {
 	amount: {        value: 1000,        currency: "EUR"    },
 	"requiredBillingContactFields": [
         "postalAddress",
