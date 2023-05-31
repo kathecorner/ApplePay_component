@@ -4,7 +4,7 @@
 // 2. get all payment methods for this shopper /GetPeyments API
 // 3. type: 'upi_collect', currency: INR
 
-// User Registeration
+// User Registeration 
 // PayAsYouGo
 // Tokenization/RecurringPayment
 // Fraud
@@ -215,17 +215,11 @@ height: atuo;
         const stopProcessing = () => {
           document.location="/showResult.html";
         }
-
-    var ApplePayconfiguration = {
-      paymentMethodsResponse : availablePaymentMethods,
-      clientKey: "test_RKKBP5GHOFFUFJJMJHOJAG7ZIIJKBMI6",
-      locale: "en-US",
-      showPayButton: true,
-      environment: "test",
-      amount: {        value: 1000,        currency: "EUR"    },
-
-      configuration: {
-      "requiredBillingContactFields": [
+        
+    var applePayConfiguration = {
+	amount: {        value: 1000,        currency: "EUR"    },
+	countrycode: "DE",
+	    "requiredBillingContactFields": [
         "postalAddress",
         "name",
         "phoneticName"
@@ -246,6 +240,18 @@ height: atuo;
             "amount": "0.00"
         }
     ]
+}
+
+    var configuration = {
+      paymentMethodsResponse : availablePaymentMethods,
+      clientKey: "test_RKKBP5GHOFFUFJJMJHOJAG7ZIIJKBMI6",
+      locale: "en-US",
+      showPayButton: true,
+      environment: "test",
+      
+
+      paymentMethodsConfiguration: {
+        applepay: applePayConfiguration,	      
    },
       
       
@@ -294,13 +300,16 @@ height: atuo;
           });
       },
       onShippingContactSelected: (resolve, reject, event) => {
-        alert('onShippingContactSelected');
+        alert('onShippingContact Selected');
+      },
+      onpaymentauthorized: function(event) {
+        alert('onpaymentauthorized Selected');
       },
       onAuthorized: (resolve, reject, event)=>{
         const postalAddress = event.payment.shippingContact;
         console.log(postalAddress);
       },
-      paymentMethodsConfiguration: {
+      paymentMethodsConfiguration_old: {
           card:{
               hasHolderName: true,
               holderNameRequired: true,
@@ -315,7 +324,7 @@ height: atuo;
     }
 
     async function initialLoad(){
-      const checkout = await AdyenCheckout(ApplePayconfiguration);
+      const checkout = await AdyenCheckout(configuration);
       const dropin = checkout.create('applepay').mount('#kenjis-dropin');
       //const dropin = checkout.create('card').mount('#kenjis-dropin');
     }
