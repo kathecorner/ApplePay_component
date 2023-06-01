@@ -309,18 +309,6 @@ height: atuo;
 	alert('on authorized Selected');
         const postalAddress = event.payment.shippingContact;
         console.log(postalAddress);
-      },
-      paymentMethodsConfiguration_old: {
-          card:{
-              hasHolderName: true,
-              holderNameRequired: true,
-              enableStoreDetails: true,
-              name: 'Credit or debit card',
-              billingAddressRequired: false
-          },
-          threeDS2: {
-            challengeWindowSize: '05'
-          },
       }
     }
 
