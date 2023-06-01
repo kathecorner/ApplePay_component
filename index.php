@@ -306,6 +306,7 @@ height: atuo;
         alert('onpaymentauthorized Selected');
       },
       onAuthorized: (resolve, reject, event)=>{
+	alert('on authorized Selected');
         const postalAddress = event.payment.shippingContact;
         console.log(postalAddress);
       },
