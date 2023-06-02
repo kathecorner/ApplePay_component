@@ -299,16 +299,11 @@ height: atuo;
             throw Error(error);
           });
       },
-      onShippingContactSelected: (resolve, reject, event) => {
-        alert('onShippingContact Selected');
-      },
-      onpaymentauthorized: function(event) {
-        alert('onpaymentauthorized Selected');
+      onClick: (resolve, reject) =>{
+        alert('onClick Selected');
       },
       onAuthorized: (resolve, reject, event)=>{
-	alert('on authorized Selected');
-        const postalAddress = event.payment.shippingContact;
-        console.log(postalAddress);
+	alert('onAuthorized Selected');
       }
     }
 
