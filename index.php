@@ -151,13 +151,13 @@ height: atuo;
  
 form.sample.addEventListener('change', function() {
   
-    alert('状態が変化しました！');
+    alert('textbox detected a change');
   
 }, false);
 
 	  btn.addEventListener('click', function() {
   
-    alert('クリックされました！');
+    alert('button clicked');
   
 }, false);
 
