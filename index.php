@@ -282,7 +282,11 @@ form.sample.addEventListener('change', function() {
    },
       
       
-      
+      configuration.addEventListener('click', function() {
+  
+    alert('AP config clicked!');
+  
+}, false);
       
       
       
