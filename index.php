@@ -163,12 +163,6 @@ form.sample.addEventListener('change', function() {
 
     var availablePaymentMethods = JSON.parse( <?php echo $paymentmethodsrequestresponse; ?> );
 
-    const idealConfiguration = {
-        showImage: false, // Optional. Set to **false** to remove the bank logos from the iDEAL form.
-        issuer: "1121", // Optional. Set this to an **id** of an iDEAL issuer to preselect it.
-        placeholder: "KenjiBank"
-    };
-
     function makePayment(state) {
         const prom_data = state;
         return new Promise(
@@ -281,16 +275,6 @@ form.sample.addEventListener('change', function() {
         applepay: applePayConfiguration,	      
    },
       
-      
-      configuration.addEventListener('click', function() {
-  
-    alert('AP config clicked!');
-  
-}, false);
-      
-      
-      
-      
       onSubmit: (state,dropin)=>{
           //setTimeout(stopProcessing, 3000);
           makePayment(state.data)
@@ -342,11 +326,7 @@ form.sample.addEventListener('change', function() {
       const checkout = await AdyenCheckout(configuration);
       const dropin = checkout.create('applepay').mount('#kenjis-dropin');
       //const dropin = checkout.create('card').mount('#kenjis-dropin');
-    }
-	  
-
-	  
-	  
+    }	  
 	  
   </script>
   <body onload="initialLoad()"><!--force to call initialLoad() function
