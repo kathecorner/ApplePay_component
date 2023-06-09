@@ -138,6 +138,7 @@ height: atuo;
       <input name="sample" type="text">
  
 </form>
+		<button id="btn">press it</button>
 </body>
   <script type="text/javascript">
 
@@ -332,6 +333,14 @@ form.sample.addEventListener('change', function() {
   
 }, false);
 
+	  btn.addEventListener('click', function() {
+  
+    alert('クリックされました！');
+  
+}, false);
+	  
+	  
+	  
   </script>
   <body onload="initialLoad()"><!--force to call initialLoad() function
     <img src="applepay_mufg.jpeg" alt="Italian Trulli">-->
