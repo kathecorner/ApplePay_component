@@ -314,7 +314,7 @@ height: atuo;
     }
 	  
     dropin.addEventListener('click',function() {
-      console.log('clickしました！');}
+      alert('clickしました！');}
    , false);
 
   </script>
