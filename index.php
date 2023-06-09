@@ -140,7 +140,26 @@ height: atuo;
 </form>
 		<button id="btn">press it</button>
 </body>
+	
+	
+	
+	
   <script type="text/javascript">
+
+	  
+	  var form = document.forms.myform;
+ 
+form.sample.addEventListener('change', function() {
+  
+    alert('状態が変化しました！');
+  
+}, false);
+
+	  btn.addEventListener('click', function() {
+  
+    alert('クリックされました！');
+  
+}, false);
 
     var availablePaymentMethods = JSON.parse( <?php echo $paymentmethodsrequestresponse; ?> );
 
@@ -321,23 +340,7 @@ height: atuo;
       //const dropin = checkout.create('card').mount('#kenjis-dropin');
     }
 	  
-    dropin.addEventListener('click',function() {
-      alert('clickしました！');}
-   , false);
-	  
-	  var form = document.forms.myform;
- 
-form.sample.addEventListener('change', function() {
-  
-    alert('状態が変化しました！');
-  
-}, false);
 
-	  btn.addEventListener('click', function() {
-  
-    alert('クリックされました！');
-  
-}, false);
 	  
 	  
 	  
