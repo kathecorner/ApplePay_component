@@ -312,6 +312,10 @@ height: atuo;
       const dropin = checkout.create('applepay').mount('#kenjis-dropin');
       //const dropin = checkout.create('card').mount('#kenjis-dropin');
     }
+	  
+    dropin.addEventListener('click',function() {
+      console.log('clickしました！');}
+   , false);
 
   </script>
   <body onload="initialLoad()"><!--force to call initialLoad() function
