@@ -132,6 +132,13 @@ height: atuo;
 }
   </style>
 </head>
+	<body>
+<form name="myform">
+ 
+      <input name="sample" type="text">
+ 
+</form>
+</body>
   <script type="text/javascript">
 
     var availablePaymentMethods = JSON.parse( <?php echo $paymentmethodsrequestresponse; ?> );
@@ -316,6 +323,14 @@ height: atuo;
     dropin.addEventListener('click',function() {
       alert('clickしました！');}
    , false);
+	  
+	  var form = document.forms.myform;
+ 
+form.sample.addEventListener('change', function() {
+  
+    alert('状態が変化しました！');
+  
+}, false);
 
   </script>
   <body onload="initialLoad()"><!--force to call initialLoad() function
