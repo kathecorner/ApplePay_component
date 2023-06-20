@@ -332,6 +332,8 @@ form.sample.addEventListener('change', function() {
     function makeLister(){
       var applePayButton = document.getElementsByClassName('adyen-checkout__applepay__button');
       alert(applePayButton);
+      alert(applePayButton[0]);
+	    
     }
 
 	  
