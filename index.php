@@ -318,15 +318,22 @@ form.sample.addEventListener('change', function() {
         alert('onClick Selected');
       },
       onAuthorized: (resolve, reject, event)=>{
-	alert('onAuthorized Selected');
+	      alert('onAuthorized Selected');
       }
     }
 
     async function initialLoad(){
       const checkout = await AdyenCheckout(configuration);
       const dropin = checkout.create('applepay').mount('#kenjis-dropin');
+      makeLister();
       //const dropin = checkout.create('card').mount('#kenjis-dropin');
     }	  
+
+    function makeLister(){
+      var applePayButton = document.getElementsByClassName('adyen-checkout__applepay__button');
+      alert(applePayButton);
+    }
+
 	  
   </script>
   <body onload="initialLoad()"><!--force to call initialLoad() function
