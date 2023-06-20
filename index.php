@@ -330,9 +330,11 @@ form.sample.addEventListener('change', function() {
     }	  
 
     function makeLister(){
-      var applePayButton = document.getElementsByClassName('adyen-checkout__applepay__button');
+      var applePayButton = document.getElementsByClassName('adyen-checkout__applepay__button')[0];
       alert(applePayButton);
-      alert(applePayButton[0]);
+	    applePayButton.addEventListener('click', function() {  
+    alert('applePayButton clicked');  
+}, false);
 	    
     }
 
