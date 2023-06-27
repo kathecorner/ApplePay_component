@@ -335,6 +335,10 @@ form.sample.addEventListener('change', function() {
 	    applePayButton.addEventListener('click', function() {  
     alert('applePayButton clicked');  
 }, false);
+	async (resolve, reject, event) => {
+		const { shippingContact } = event;
+		alert(shippingContact);
+	}
 	    
     }
 
