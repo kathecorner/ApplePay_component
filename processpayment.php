@@ -13,7 +13,7 @@ $additional_data = [
     //'countryCode' => 'DK',
     'amount' => [
         'value' => 1000,
-        'currency' => 'USD'
+        'currency' => 'EUR'
     ],
     //'returnUrl' => 'http://127.0.0.1:8080/return.php',
     //'returnUrl' => 'http://127.0.0.1:8080/result.php',
