@@ -48,12 +48,12 @@ $additional_data = [
                 'houseNumberOrName' => '109',
                 'postalCode' => '179097',
                 'street' => 'North Bridge Road'
-            ),
+            ),*/
 
     'storePaymentMethod'=> true,
     'shopperInteraction'=> 'Ecommerce',
     'recurringProcessingModel'=> 'CardOnFile',
-    'shopperReference'=> 'Shopper03'*/
+    'shopperReference'=> 'DEC2023'
 
     /*
     'browserInfo' => [
